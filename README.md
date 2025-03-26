@@ -38,17 +38,16 @@ This project includes two core components:
 
 ### State-Space Formulation
 
-For both parts, the hidden state \( X_n \) evolves according to a transition model:
+For both parts, the hidden state \(```math X_n ```\) evolves according to a transition model:
 
 ```math
 X_n = f(X_{n-1}) + U_n
 ```
 
 Observations \( Y_n \) are generated via:
-
-\[
+```math
 Y_n = g(X_n) + V_n
-\]
+```
 
 where \( U_n \) and \( V_n \) are random noise components.
 
