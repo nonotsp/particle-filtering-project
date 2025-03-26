@@ -73,3 +73,49 @@ Implements the particle filter on the **Kitagawa model**:
   - Comparison with varying number of particles
 
 
+---
+
+### `exercice2.py`
+
+Applies the particle filter to **image-based tracking**:
+
+- Loads a video frame sequence
+- Allows manual selection of initial tracking region
+- Computes reference histogram for the object
+- Propagates particles across frames using Gaussian noise
+- Reweights particles based on histogram similarity
+- Resamples and estimates the new object position
+- Plots:
+  - Bounding box (red)
+  - Particle cloud (blue)
+  - Frame-by-frame overlay of tracking results
+
+---
+
+### `exercice2_version_zoom.py`
+
+Extension of `exercice2.py` that includes **scale adaptation** in the state vector:
+
+- Augments state space with a scaling factor
+- Adjusts bounding box dimensions accordingly
+- Allows tracking with zoom effect (object moving closer/farther from camera)
+
+---
+
+## Key Features
+
+- Works with both **synthetic and real-world data**
+- Handles **nonlinear and non-Gaussian** filtering
+- Implements **resampling** strategies
+- Robust to partial occlusion and observation noise
+- Modular code structure, reusable functions
+
+---
+
+## Learning Objectives
+
+- Understand the principles of sequential Monte Carlo methods
+- Implement a complete particle filter from scratch
+- Apply filtering to nonlinear dynamic systems
+- Use computer vision techniques for object tracking
+- Evaluate the impact of key parameters: noise, number of particles, λ (likelihood sharpness)
